@@ -8,6 +8,12 @@ export default function Navbar() {
       <Link to="/signup">Signup</Link>
       <Link to="/dashboard">Dashboard</Link>
       <Link className="nav-link" to="/expenses">Expenses</Link>
+      <Link className="nav-link" to="/budgets">Budgets</Link>
+      <li className="nav-item">
+        <Link className="nav-link" to="/goals">
+          Savings Goals
+        </Link>
+      </li>
     </div>
   );
 }
