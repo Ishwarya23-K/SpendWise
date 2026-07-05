@@ -1,14 +1,10 @@
-import axios from "axios";
+import api from "./api";
 
-const API_URL = "http://localhost:5000/api/budgets";
-
-const getToken = () => {
-  return localStorage.getItem("token");
-};
+const getToken = () => localStorage.getItem("token");
 
 // Set Budget
 export const setBudget = async (budgetData) => {
-  const response = await axios.post(API_URL, budgetData, {
+  const response = await api.post("/budgets", budgetData, {
     headers: {
       Authorization: `Bearer ${getToken()}`,
     },
@@ -19,7 +15,7 @@ export const setBudget = async (budgetData) => {
 
 // Get Budgets
 export const getBudgets = async () => {
-  const response = await axios.get(API_URL, {
+  const response = await api.get("/budgets", {
     headers: {
       Authorization: `Bearer ${getToken()}`,
     },

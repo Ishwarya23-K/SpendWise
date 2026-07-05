@@ -1,13 +1,9 @@
-import axios from "axios";
+import axios from "./api";
 
-const API_URL = "http://localhost:5000/api/analytics";
-
-const getToken = () => {
-  return localStorage.getItem("token");
-};
+const getToken = () => localStorage.getItem("token");
 
 export const getAnalytics = async () => {
-  const response = await axios.get(API_URL, {
+  const response = await axios.get("/analytics", {
     headers: {
       Authorization: `Bearer ${getToken()}`,
     },

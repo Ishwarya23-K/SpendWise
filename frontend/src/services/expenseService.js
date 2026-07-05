@@ -1,29 +1,43 @@
-import axios from "axios";
-
-const API_URL = "http://localhost:5000/api/expenses";
+import axios from "./api";
 
 const getToken = () => localStorage.getItem("token");
 
 export const addExpense = async (expenseData) => {
-  return await axios.post(API_URL, expenseData, {
-    headers: { Authorization: `Bearer ${getToken()}` },
-  }).then(res => res.data);
+  const response = await axios.post("/expenses", expenseData, {
+    headers: {
+      Authorization: `Bearer ${getToken()}`,
+    },
+  });
+
+  return response.data;
 };
 
 export const getExpenses = async () => {
-  return await axios.get(API_URL, {
-    headers: { Authorization: `Bearer ${getToken()}` },
-  }).then(res => res.data);
+  const response = await axios.get("/expenses", {
+    headers: {
+      Authorization: `Bearer ${getToken()}`,
+    },
+  });
+
+  return response.data;
 };
 
 export const updateExpense = async (id, expenseData) => {
-  return await axios.put(`${API_URL}/${id}`, expenseData, {
-    headers: { Authorization: `Bearer ${getToken()}` },
-  }).then(res => res.data);
+  const response = await axios.put(`/expenses/${id}`, expenseData, {
+    headers: {
+      Authorization: `Bearer ${getToken()}`,
+    },
+  });
+
+  return response.data;
 };
 
 export const deleteExpense = async (id) => {
-  return await axios.delete(`${API_URL}/${id}`, {
-    headers: { Authorization: `Bearer ${getToken()}` },
-  }).then(res => res.data);
+  const response = await axios.delete(`/expenses/${id}`, {
+    headers: {
+      Authorization: `Bearer ${getToken()}`,
+    },
+  });
+
+  return response.data;
 };
