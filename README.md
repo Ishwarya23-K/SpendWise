@@ -64,7 +64,7 @@ https://spendwise-backend-ishwarya.onrender.com
 ### Landing Page
 ![Landing Page](Screenshots/Landing.png)
 ### Dashboard
-![Dashboard](Screenshots/Dashboard.png)
+![Dashboard](Screenshots/Dashboard.jpeg)
 ### Expenses
 ![Expenses](Screenshots/Expenses.png)
 ### Budgets
