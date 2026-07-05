@@ -115,8 +115,8 @@ npm start
 
 ## 👩‍💻 Developed By
 
-Ishwarya K
-Jesly Rowena J A
+**Ishwarya K**
+**Jesly Rowena J A**
 
 B.Tech Information Technology
 
