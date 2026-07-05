@@ -72,7 +72,7 @@ https://spendwise-backend-ishwarya.onrender.com
 ### Savings Goals
 ![Goals](Screenshots/SavingsGoal.png)
 ### Power BI Dashboard
-![Power BI](Screenshots/PowerBi.png)
+![Power BI](Screenshots/PowerBI.png)
 
 ---
 
